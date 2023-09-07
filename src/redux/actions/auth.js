@@ -1,3 +1,4 @@
+// This is for authentication
 import {
     SIGNUP_SUCCESS,
     SIGNUP_FAIL
