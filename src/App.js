@@ -5,6 +5,10 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './containers/Home';
 import Error404 from './containers/errors/Error404';
 
+import Signup from './containers/auth/Signup';
+import Login from './containers/auth/Login';
+import Activate from './containers/auth/Activate';
+
 
 function App() {
   return (
@@ -16,6 +20,12 @@ function App() {
 
           {/* Home displays */}
           <Route exact path="/" element={<Home />} />
+
+          {/* Autentication */}
+          <Route exact path="/register" element={<Signup />} />
+          <Route exact path="/login" element={<Login />} />
+          <Route exact path="/activate/:uid/:token" element={<Activate />} />
+
 
         </Routes>
       </Router>
